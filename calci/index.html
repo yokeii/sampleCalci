@@ -1,39 +1,405 @@
-<html lang="en"> 
-    <head>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-       <meta http-equiv="X-ua-Compatible" content="IE=edge">
-       <meta name="viewport" contant="width=device-width, initial-scale=1.0">
-       <link rel="stylesheet" href="style.css">
-       <title>Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>veggies</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
 </head>
 <body>
-        <div id ="calculator">
-            <input id="display" readonly>
-            <div id="keys">
+    <nav class="navigation">
+        <a href="#" class="logo">
+            <h2>Veggies</h2>
+        </a>
 
-                <button onclick="appendToDisplay('1')">1</button>
-                <button onclick="appendToDisplay('2')">2</button>
-                <button onclick="appendToDisplay('3')">3</button>
-                <button onclick="appendToDisplay('4')">4</button>
-                <button onclick="appendToDisplay('5')">5</button>
-                <button onclick="appendToDisplay('6')">6</button>
-                <button onclick="appendToDisplay('7')">7</button>
-                <button onclick="appendToDisplay('8')">8</button>
-                <button onclick="appendToDisplay('9')">9</button>
-                <button onclick="appendToDisplay('0')">0</button>
-                <button onclick="appendToDisplay('00')">00</button>
-                <button onclick="appendToDisplay('.')">.</button>
-                <button onclick="appendToDisplay('+')"class="display-btn">+</button>
-                <button onclick="appendToDisplay('-')"class="display-btn">-</button>
-                <button onclick="appendToDisplay('*')"class="display-btn">*</button>
-                <button onclick="appendToDisplay('/')"class="display-btn">/</button>
-                <button onclick="Calculate()"class="display-btn">=</button>
-                <button onclick="clearDisplay()"class="display-btn">c</button>
-                <button onclick="del()"class="display-btn">DEL</button>
-            </div>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Our packages</a></li>
+            <li><a href="#">Our App</a></li>
+        </ul>
+        <div class="right-nav">
+
+            <a href="#" class="like">
+                <i class="fa-regular fa-heart"></i>
+                <samp>0</samp>
+            </a>
+            <a href="#" class="cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <samp>0</samp>
+            </a>
+        </div>
+    </nav>
+    <section id="search-banner">
+
+
+<div class="search-banner-text">
+    <h1>Order Your Daily Groceries</h1>
+    <strong>#Free Delivery</strong>
+
+    <form action="" class="search-box">
+
+        <i class="fas fa-search"></i>
+        <input type="text" class="search-input" placeholder="Search Your Daily Groceries" name="search" required>
+
+        <input type="submit" class="search-btn" value="search">
+    </form>
 </div>
-<script src="index.js"></script>
-</body>
+    </section>
 
+    <section id="category">
+        <div class="category-heading">
+            <h2>Category</h2>
+            <span>All</span>
+        </div>
+       
+<div class="category-container">
+
+    <a href="#" class="category-box">
+    <img src="fish1.png" alt="fish">
+</a>
+   <a href="#" class="category-box">
+        <img src="veg.png" alt="veg">
+    </a>
+  
+<a href="#" class="category-box">
+    <img src="FRUITS.png" alt="FRUITS">
+</a>
+   
+</a>
+</div>
+    </section>
+
+    <section id="product">
+<div class="product-heading">
+    <h3>Popular product</h3>
+    <span>All</span>
+</div>
+
+
+<div class="product-container">
+    <div class="product-box">
+        
+    <img src="apple.png" alt="apple">
+    <strong>Apple</strong>
+   <span class="quantity">1KG</span>
+   <span class="price">₹200</span>
+
+   <a href="#" class="cart-btn">
+    <i class="fas fa-cart-shopping"></i> Add To Cart
+   </a>
+
+   <a href="#" class="like-btn">
+<i class="far fa-heart"></i>
+
+   </a>
+    </div>
+   
+    <div class="product-box">
+        
+        <img src="carrot.jpg" alt="carrot">
+        <strong>Carrot</strong>
+       <span class="quantity">1KG</span>
+       <span class="price">₹60</span>
+    
+       <a href="#" class="cart-btn">
+        <i class="fas fa-cart-shopping"></i> Add To Cart
+       </a>
+    
+       <a href="#" class="like-btn">
+    <i class="far fa-heart"></i>
+    
+       </a>
+        </div>
+
+        <div class="product-box">
+        
+            <img src="tomato.png" alt="tomato">
+            <strong>Tomato</strong>
+           <span class="quantity">1KG</span>
+           <span class="price">₹50</span>
+        
+           <a href="#" class="cart-btn">
+            <i class="fas fa-cart-shopping"></i> Add To Cart
+           </a>
+        
+           <a href="#" class="like-btn">
+        <i class="far fa-heart"></i>
+        
+           </a>
+            </div>
+
+            <div class="product-box">
+        
+                <img src="onion.png" alt="onion">
+                <strong>Onion</strong>
+               <span class="quantity">1KG</span>
+               <span class="price">₹55</span>
+            
+               <a href="#" class="cart-btn">
+                <i class="fas fa-cart-shopping"></i> Add To Cart
+               </a>
+            
+               <a href="#" class="like-btn">
+            <i class="far fa-heart"></i>
+            
+               </a>
+                </div>
+
+                <div class="product-box">
+        
+                    <img src="chilli.png" alt="chilli">
+                    <strong>Green Chilli</strong>
+                   <span class="quantity">1KG</span>
+                   <span class="price">₹40</span>
+                
+                   <a href="#" class="cart-btn">
+                    <i class="fas fa-cart-shopping"></i> Add To Cart
+                   </a>
+                
+                   <a href="#" class="like-btn">
+                <i class="far fa-heart"></i>
+                
+                   </a>
+                    </div>
+
+<div class="product-box">
+<img src="potato.png" alt="potato">
+    <strong>Potato</strong>
+    <span class="quantity">1KG</span>
+     <span class="price">₹38</span>
+     <a href="#" class="cart-btn">
+        <i class="fas fa-cart-shopping"></i> Add To Cart
+</a>
+                    
+     <a href="#" class="like-btn">
+    <i class="far fa-heart"></i>
+                    
+</a>
+</div>
+
+<div class="product-box">
+        
+<img src="red chilli.jpg" alt="red chilli">
+<strong> Red Chilli</strong>
+<span class="quantity">1KG</span>
+<span class="price">₹45</span>
+
+<a href="#" class="cart-btn">
+<i class="fas fa-cart-shopping"></i> Add To Cart
+</a>
+
+<a href="#" class="like-btn">
+<i class="far fa-heart"></i>
+                        
+</a>
+
+                            </div>
+                            <div class="product-box">
+        
+                                <img src="pumpkin.jpg" alt="pumpkin">
+                                <strong>Pumpkin</strong>
+                               <span class="quantity">1KG</span>
+                               <span class="price">₹45</span>
+                            
+                               <a href="#" class="cart-btn">
+                                <i class="fas fa-cart-shopping"></i> Add To Cart
+                               </a>
+                            
+                               <a href="#" class="like-btn">
+                            <i class="far fa-heart"></i>
+                            
+                               </a>
+                                </div>
+
+                                <div class="product-box">
+        
+     <img src="broccoli.jpg" alt="broccoli">
+<strong>broccoli</strong>
+<span class="quantity">1Piece</span>
+<span class="price">₹35</span>
+                                
+<a href="#" class="cart-btn">
+<i class="fas fa-cart-shopping"></i> Add To Cart
+</a>
+                                
+<a href="#" class="like-btn">
+<i class="far fa-heart"></i>
+                                
+</a>
+</div>
+
+<div class="product-box">
+        
+<img src="garlic.png" alt="garlic">
+<strong>Garlic</strong>
+<span class="quantity">1KG</span>
+<span class="price">₹200</span>
+                                    
+<a href="#" class="cart-btn">
+<i class="fas fa-cart-shopping"></i> Add To Cart
+</a>
+                                    
+<a href="#" class="like-btn">
+<i class="far fa-heart"></i>
+                                    
+</a>
+</div>
+
+<div class="product-box">
+        
+<img src="ginger.jpg" alt="ginger">
+<strong>Ginger</strong>
+<span class="quantity">1KG</span>
+<span class="price">₹110</span>
+                                        
+<a href="#" class="cart-btn">
+<i class="fas fa-cart-shopping"></i> Add To Cart
+</a>
+                                        
+<a href="#" class="like-btn">
+<i class="far fa-heart"></i>
+                                        
+</a>
+</div>
+                                            
+
+<div class="product-box">
+        
+<img src="Cauliflower.png" alt="Cauliflower">
+<strong>Cauliflower</strong>
+<span class="quantity">1Piece</span>
+<span class="price">₹30</span>
+                                            
+<a href="#" class="cart-btn">
+<i class="fas fa-cart-shopping"></i> Add To Cart
+</a>
+                                            
+<a href="#" class="like-btn">
+<i class="far fa-heart"></i>
+                                            
+</a>
+</div>
+
+<div class="product-box">
+        
+    <img src="papaya.jpg" alt="papaya">
+    <strong>Papaya</strong>
+    <span class="quantity">1KG</span>
+    <span class="price">₹70</span>
+                                            
+    <a href="#" class="cart-btn">
+    <i class="fas fa-cart-shopping"></i> Add To Cart
+    </a>
+                                            
+    <a href="#" class="like-btn">
+    <i class="far fa-heart"></i>
+                                            
+    </a>
+    </div>
+          
+    
+    <div class="product-box">
+        
+        <img src="strawberry.png" alt="strawberry">
+        <strong>Strawberry</strong>
+        <span class="quantity">1KG</span>
+        <span class="price">₹120</span>
+                                                
+        <a href="#" class="cart-btn">
+        <i class="fas fa-cart-shopping"></i> Add To Cart
+        </a>
+                                                
+        <a href="#" class="like-btn">
+        <i class="far fa-heart"></i>
+                                                
+        </a>
+        </div>
+          
+        
+        <div class="product-box">
+        
+            <img src="watermelon.png" alt="watermelon">
+            <strong>Watermelon</strong>
+            <span class="quantity">1KG</span>
+            <span class="price">₹25</span>
+                                                    
+            <a href="#" class="cart-btn">
+            <i class="fas fa-cart-shopping"></i> Add To Cart
+            </a>
+                                                    
+            <a href="#" class="like-btn">
+            <i class="far fa-heart"></i>
+                                                    
+            </a>
+            </div>
+        
+            
+            <div class="product-box">
+        
+                <img src="banana.png" alt="banana">
+                <strong>Banana</strong>
+                <span class="quantity">1KG</span>
+                <span class="price">₹40</span>
+                                                        
+                <a href="#" class="cart-btn">
+                <i class="fas fa-cart-shopping"></i> Add To Cart
+                </a>
+                                                        
+                <a href="#" class="like-btn">
+                <i class="far fa-heart"></i>
+                                                        
+                </a>
+                </div>
+       
+                
+                <div class="product-box">
+        
+                    <img src="pineapple.png" alt="pineapple">
+                    <strong>pineapple</strong>
+                    <span class="quantity">1KG</span>
+                    <span class="price">₹60</span>
+                                                            
+                    <a href="#" class="cart-btn">
+                    <i class="fas fa-cart-shopping"></i> Add To Cart
+                    </a>
+                                                            
+                    <a href="#" class="like-btn">
+                    <i class="far fa-heart"></i>
+                                                            
+                    </a>
+                    </div>
+
+                    
+                    <div class="product-box">
+        
+                        <img src="mango.png" alt="mango">
+                        <strong>Mango</strong>
+                        <span class="quantity">1KG</span>
+                        <span class="price">₹80</span>
+                                                                
+                        <a href="#" class="cart-btn">
+                        <i class="fas fa-cart-shopping"></i> Add To Cart
+                        </a>
+                                                                
+                        <a href="#" class="like-btn">
+                        <i class="far fa-heart"></i>
+                                                                
+                        </a>
+                        </div>                                 
+
+</div>
+
+
+</section>
+
+    
+</body>
 </html>
